@@ -156,3 +156,24 @@ void deleteNode()
     cout << "\x1b[32mRecord with roll number " << rollNo << " deleted\x1bp[0m" << endl;
 }
 
+bool listempty()
+{
+    return (START == NULL);
+}
+
+void traverse()
+{
+    if (listempty())
+        cout << "\nList is empty" << endl;
+    else
+    {
+        cout << "\nRecord in ascending order of roll number are:" << endl;
+        Node *currentNode = START;  // step 1
+        while (currentNode != NULL) // step 2
+        {
+            cout << "currentNode->noMhs" << " " << currentNode->name << endl;
+            currentNode = currentNode->prev;
+        }
+    }
+}
+
